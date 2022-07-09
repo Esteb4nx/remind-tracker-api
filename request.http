@@ -3,14 +3,24 @@ POST http://localhost:9000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "username":"Esteban 1.0",
+    "username":"Fran 1.0",
     "password": "123",
     "session":[
                 {
                   "date": "09/07/2022",
                   "score": 5,
                   "duration": 50
-                }               
+                },
+                {
+                  "date": "09/07/2022",
+                  "score": 5,
+                  "duration": 50
+                },
+                {
+                  "date": "09/07/2022",
+                  "score": 5,
+                  "duration": 50
+                }                      
               ]
 }
 
@@ -19,22 +29,16 @@ Content-Type: application/json
 GET http://localhost:9000/api/users HTTP/1.1
 
 ###
-GET http://localhost:9000/api/users/62c93626d922c2ccbc893786 HTTP/1.1
+GET http://localhost:9000/api/users/62ca079075813337e75f0f7a HTTP/1.1
 
 ###
-PUT http://localhost:9000/api/users/62c93626d922c2ccbc893786 HTTP/1.1
+PUT http://localhost:9000/api/users/62ca083e75813337e75f0f86 HTTP/1.1
 Content-Type: application/json
 
 {
-    "username":"Isidora 2.0",
-    "password": "22",
-    "session": [{
-        "date": "24/07/2022",
-        "score": 5,
-        "duration": 15
-    }]
+    "username":"uwu 1.0"
 }
 
 ###
-DELETE http://localhost:9000/api/users/62c93626d922c2ccbc893786 HTTP/1.1
+DELETE http://localhost:9000/api/users/62ca079075813337e75f0f7a HTTP/1.1
 Content-Type: application/json
