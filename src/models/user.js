@@ -10,8 +10,15 @@ const userSchema = mongoose.Schema({
         required: true
     },
     session:[{
-        type: mongoose.Schema.ObjectId,
-        ref: "Session"
+        date: {
+            type: String
+        },
+        score: {
+            type: Number
+        },
+       duration: {
+            type: Number
+        }
     }]
 });
 

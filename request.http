@@ -3,8 +3,15 @@ POST http://localhost:9000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "username":"Isidora 1.0",
-    "password": "123"
+    "username":"Esteban 1.0",
+    "password": "123",
+    "session":[
+                {
+                  "date": "09/07/2022",
+                  "score": 5,
+                  "duration": 50
+                }               
+              ]
 }
 
 
