@@ -15,3 +15,11 @@ exports.getUsers = (req, res)=>{
       .then((data) => res.json(data))
       .catch((error) => res.json({ message: error }));
 };
+
+exports.getUserById= (req,res)=>{
+  const {id} = req.params;
+  User
+      .findById(id)
+      .then((data)=> res.json(data))
+      .catch((error)=> res.json({message:error}));
+};

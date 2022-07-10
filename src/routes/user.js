@@ -12,7 +12,7 @@ module.exports = function(app) {
   });
 
   app.get("/api/users", controller.getUsers);
+  app.get("/api/users/:id",controller.getUserById);
   app.get("/api/test/all", controller.allAccess);
   app.get("/api/test/user", [authJwt.verifyToken], controller.userBoard);
-
 };
