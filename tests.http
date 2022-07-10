@@ -1,0 +1,33 @@
+# Register
+###
+POST http://localhost:9000/api/auth/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"Isi",
+    "password": "123"
+}
+
+
+# Login
+###
+POST http://localhost:9000/api/auth/signin HTTP/1.1
+Content-Type: application/json
+
+{
+    "username":"Isi",
+    "password": "123"
+}
+
+
+# Consulta a sitios publicos, no requieren autenticación
+# Ej: Login y Register
+###
+GET http://localhost:9000/api/test/all HTTP/1.1
+
+# Consulta de contenido restringido, requiere el access token en el header, se obtiene en la petición de login
+###
+GET http://localhost:9000/api/test/user HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyY2E2MzlhMzVkNzkzYzYzOGZkNmY1ZSIsImlhdCI6MTY1NzQzMjU1MSwiZXhwIjoxNjU3NTE4OTUxfQ.s06g-RldXzCqg_bRTGcTFX5472AE41tsod-_wRKbIS8
+
+

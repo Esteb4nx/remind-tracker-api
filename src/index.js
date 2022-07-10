@@ -1,14 +1,18 @@
 const express = require('express')
 const mongoose = require('mongoose')
 require('dotenv').config()
-const userRoutes = require('./routes/user')
+const user = require('./routes/user')
+const auth = require('./routes/auth')
+
 
 const app = express();
 const port = process.env.PORT || 9000;
 
 //middleware
 app.use(express.json());
-app.use('/api', userRoutes);
+user(app);
+auth(app);
+
 
 //routes
 app.get('/',(req,res) => {
